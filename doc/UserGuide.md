@@ -729,15 +729,15 @@ These command line arguments can also be used in SBT to tweak ScalaCheck's
 testing parameters when you run ScalaCheck tests through SBT. See SBT's
 documentation for info on how to provide the arguments.
 
-### Test Case Minimisation
+### Test Case Minimization
 
 One interesting feature of ScalaCheck is that if it finds an argument that
-falsifies a property, it tries to _minimise_ that argument before it is
+falsifies a property, it tries to _minimize_ that argument before it is
 reported. This is done automatically when you use the `Prop.property` and
 `Prop.forAll` methods to create properties, but not if you use
 `Prop.forAllNoShrink`. Let's look at the difference between these methods, by
 specifying a property that says that no list has duplicate elements in it. This
-is of course not true, but we want to see the test case minimisation in action!
+is of course not true, but we want to see the test case minimization in action!
 
 ```scala
 import org.scalacheck.Arbitrary.arbitrary
